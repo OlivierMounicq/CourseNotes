@@ -1,12 +1,12 @@
 ```console
-mkdir GitExmple
-cd GitExample
-git init
-cd .git
+>mkdir GitExmple
+>cd GitExample
+>git init
+>cd .git
 ```
 
 ```console
-tree /f
+>tree /f
 │   config
 │   description
 │   HEAD
