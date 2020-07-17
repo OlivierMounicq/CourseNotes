@@ -23,6 +23,38 @@ For example, for a Sudoku problem, the verification is
 
 To solve, we can use the brut force, but there are 2<sup>N</sup>  
 
+10 objects : 1024 combinations 
+20 objects : about 1 million combinations  
+60 objects :  
+300 objects :  
+
+Exponential complexity : 2<sup>N</sup>  
+
+But the solution verification is easy !  
+
+- Find a solution : exponential complexity  
+- Verify the solution : linear complexity  
+
+### Prime factor  
+
+Example:  
+- 30 = 3 x 2 x5  
+- 10241 = 7 x 7 x 11 x 19  
+- 56475871 = 7247 x 7793  
+
+We use   
+
+
+
+### Algorithm complexity Classes
+
+
+
+### Class P - Class NP
+
+
+
+
 
 
 
