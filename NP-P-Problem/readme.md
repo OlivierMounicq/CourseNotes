@@ -104,6 +104,17 @@ NP problem set = {(P problem : easy to solve, easy to verify), (hard to solve, e
 Some problems could switch from a category to another if the scientific community finds a new way to solve them.  
 For example, the algorihm determining that a number is a prime number was an exponential-time problem before 2002. In 2002, three mathematicians (Agrawal, Kayal & Sanexa) propose a new algorithm with a polynomial-time complexity : _O(_N<sup>12<sup>_)_. And few years after, the complexity decrease up to _O(_N<sup>6<sup>_)_. This problem migrates to the P-problem class.
 
+So we may ask this question regarding the willness to reduce the complexity of the NP-algorithm in order to find new algorithm with polynomial time complexity : _do it exist some NP problems for which it is impossible to find a polynomial-time algorithm ?_  
+=> If yes, so the NP-class is different from the P-class.  
+
+Else if all NP problem can be solved by using a polynomial algorithm, it means that if a problem solution can be verified in polynomial-time therefore this problem can also be also in polynomial-time => _Easy to verify then easy to solve_.   
+
+#### 2.6 The question N=NP  
+
+The question N=NP means P and NP are the same class.  
+
+One way to demonstrate that the proposition is false (so in this case, the NP problems are different from the P problems) is to find only one algorithm with complexity lower-bounder equal to a complex-time.
+
 
 
 
