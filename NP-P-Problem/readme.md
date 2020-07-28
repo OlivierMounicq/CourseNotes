@@ -58,8 +58,8 @@ To solve, we can use the brut force, but there are 2<sup>N</sup>
 
 10 objects : 1024 combinations 
 20 objects : about 1 million combinations  
-60 objects :  
-300 objects :  
+60 objects :  10<sup>18</sup>
+300 objects :  more combinations than atoms in the global universe
 
 Exponential complexity : 2<sup>N</sup>  
 
@@ -68,7 +68,7 @@ But the solution verification is easy !
 - Find a solution : exponential complexity  
 - Verify the solution : linear complexity  
 
-### Prime factorization  
+#### 1.4 Prime factorization  
 
 We want to decompose a number by using multiplication with only prime numbers.  
 
