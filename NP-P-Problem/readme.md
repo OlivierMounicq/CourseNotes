@@ -2,7 +2,7 @@
 
 ### TL;TR;
 
-P problem = easy to solve, easy to verify the solution, polynomial-time complexity
+P problem = easy to solve, easy to verify the solution, polynomial-time complexity  
 NP problem = hard to solve, easy to verify  the solution, exponential-time complexity
 
 If we can prove N = NP then for all actual NP problem, there exists a time-polynomial complexity algorithm to solve it.  
