@@ -1,5 +1,13 @@
 ## Problem NP = P
 
+### TL;TR;
+
+P problem = easy to solve, easy to verify the solution, polynomial-time complexity
+NP problem = hard to solve, easy to verify  the solution, exponential-time complexity
+
+If we can prove N = NP then for all actual NP problem, there exists a time-polynomial complexity algorithm to solve it.  
+If we can prove N != NP then some algorithms cannot be solved by using a polynomial-time algorithm
+
 Algorithm complexity : algorithm's operation quantity to solve the problem  
 
 Class P  : low algorithm complexity | easy to verify the solution  
@@ -114,6 +122,28 @@ Else if all NP problem can be solved by using a polynomial algorithm, it means t
 The question N=NP means P and NP are the same class.  
 
 One way to demonstrate that the proposition is false (so in this case, the NP problems are different from the P problems) is to find only one algorithm with complexity lower-bounder equal to a complex-time.
+
+### 3. Universal NP problem : SAT problem.
+
+#### 3.1 The SAT problem
+
+A SAT problem is boolean-logic problem. We define the problem by using logic constraints. 
+
+
+#### 3.2 SAT problem equivalence
+
+There exists the universal NP problem : the SAT problem.   
+And the mathematicans demonstrated during the 70's the equivalence between the NP problem and SAT problem. Every NP problem has its equivalent SAT problem.  
+If we know how to solve a SAT problem with a ploynomial-time algorithm, then we could to solve every NP problem with a polynomial-time algorithm.  
+
+A SAT problem is  NP-complet.
+
+### 4 Demonstration
+
+=> if we want to prove that NP are different from P, then we have to find only one algorithm for which the complexity lower bound is greater than _O(_N log(N)_)_  
+=> if we want to prove N = NP, then we have to find a NP-complet problem with a polynomial-time complexity.
+
+
 
 
 
