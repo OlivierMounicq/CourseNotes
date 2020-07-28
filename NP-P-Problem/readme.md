@@ -110,7 +110,8 @@ NP problem set = {(P problem : easy to solve, easy to verify), (hard to solve, e
 #### 2.5 The problem categorization evolution  
 
 Some problems could switch from a category to another if the scientific community finds a new way to solve them.  
-For example, the algorihm determining that a number is a prime number was an exponential-time problem before 2002. In 2002, three mathematicians (Agrawal, Kayal & Sanexa) propose a new algorithm with a polynomial-time complexity : _O(_N<sup>12<sup>_)_. And few years after, the complexity decrease up to _O(_N<sup>6<sup>_)_. This problem migrates to the P-problem class.
+For example, the algorihm determining that a number is a prime number was an exponential-time problem before 2002. In 2002, three mathematicians (Agrawal, Kayal & Sanexa) propose a new algorithm with a polynomial-time complexity : _O(_N<sup>12<sup>_)_. And few years after, the complexity decrease up to _O(_N<sup>6<sup>_)_. This problem migrates to the P-problem class.  
+[AKS primality test](https://en.wikipedia.org/wiki/AKS_primality_test)  
 
 So we may ask this question regarding the willness to reduce the complexity of the NP-algorithm in order to find new algorithm with polynomial time complexity : _do it exist some NP problems for which it is impossible to find a polynomial-time algorithm ?_  
 => If yes, so the NP-class is different from the P-class.  
