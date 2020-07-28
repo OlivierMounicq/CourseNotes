@@ -73,12 +73,37 @@ We use this kind of factorization for the RSA cryptosystem.
 
 The complexity to decompose a number with N figures : _O_(10<sup>N</sup>).
 
+The verification is easier than to solve the problem.  
 
 ### 2. Algorithm complexity Classes
 
+#### 2.1 Class P 
 
+=> This class contains all the polynomial problem => The polynomial problem complexity : _O(_N<sup>k</sup>_)_ with k=1,2... or N.log(N).  
+The P-class problems are polynomial-time algorithm.  
 
-### Class P - Class NP
+#### 2.2 Exponential-time algorithm  
+
+In this class, there is a subset in which the problems are hard to solve but easy to verify => those problems define _NP class_.  
+
+NP stands for Non-determnistic Polymonial.  
+
+#### 2.3 Class NP
+
+NP problem => hard to solve but easy to verify a solution.
+
+#### 2.4 Classes P and NP
+
+NP problem => hard to solve and easy to verify  
+P problem => easy to solve then easy to verify ==> So class NP also contains all P problems.  
+
+NP problem set = {(P problem : easy to solve, easy to verify), (hard to solve, easy to verify)}
+
+#### 2.5 The problem categorization evolution  
+
+Some problems could switch from a category to another if the scientific community finds a new way to solve them.  
+For example, the algorihm determining that a number is a prime number was an exponential-time problem before 2002. In 2002, three mathematicians (Agrawal, Kayal & Sanexa) propose a new algorithm with a polynomial-time complexity : _O(_N<sup>12<sup>_)_. And few years after, the complexity decrease up to _O(_N<sup>6<sup>_)_. This problem migrates to the P-problem class.
+
 
 
 
