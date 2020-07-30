@@ -232,3 +232,154 @@ And the file content is :
 
 print("Hello World!")
 ```
+
+Let check the update in the GIT object model : 
+
+```console
+C:\GIT-1st-example\src> cd ..
+C:\GIT-1st-example> git add .
+C:\GIT-1st-example\> git commit -m "2nd commit : add the python file"
+C:\GIT-1st-example> cd .git
+C:\GIT-1st-example\.git> tree /f 
+```
+
+And we can see that some objects have been added in the _objects_ subdirectory:
+
+```console
+Folder PATH listing for volume Windows
+Volume serial number is 7E3E-9A68
+C:.
+│   COMMIT_EDITMSG
+│   config
+│   description
+│   HEAD
+│   index
+│
+├───hooks
+│       applypatch-msg.sample
+│       commit-msg.sample
+│       fsmonitor-watchman.sample
+│       post-update.sample
+│       pre-applypatch.sample
+│       pre-commit.sample
+│       pre-merge-commit.sample
+│       pre-push.sample
+│       pre-rebase.sample
+│       pre-receive.sample
+│       prepare-commit-msg.sample
+│       update.sample
+│
+├───info
+│       exclude
+│
+├───logs
+│   │   HEAD
+│   │
+│   └───refs
+│       └───heads
+│               master
+│
+├───objects
+│   ├───42
+│   │       55c42db81d12a8824cd3c64862bdb1404faa04
+│   │
+│   ├───9f
+│   │       0c98d2a3e28f6e982067535699136a573385a9
+│   │
+│   ├───bc
+│   │       a043fe83ede3a8d5385e723dccec4b74dd15c6
+│   │
+│   ├───df
+│   │       311d344734adc6e7cbea60c3e31987f855a9fe
+│   │
+│   ├───f7
+│   │       19f6ba8069fff67026125d461f28f9424caed7
+│   │
+│   ├───info
+│   └───pack
+└───refs
+    ├───heads
+    │       master
+    │
+    └───tags
+```
+
+Let start by the root object. For do that, we will use the second commit : 
+
+```command
+C:\GIT-1st-example> git log
+```
+
+```command
+commit 4255c42db81d12a8824cd3c64862bdb1404faa04 (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Thu Jul 30 23:56:44 2020 +0200
+
+    2nd commit : add the python file
+```
+
+The commit had a related hash code : _4255c42db81d12a8824cd3c64862bdb1404faa04_ . Let discover what this blob contains :
+
+```command
+C:\GIT-1st-example> git cat-file -p 4255
+```
+So this blob is a _commit_ and it contains a tree _bca043fe83ede3a8d5385e723dccec4b74dd15c6_
+
+```command
+tree bca043fe83ede3a8d5385e723dccec4b74dd15c6
+author Olivier Mounicq <mounicq@gmail.com> 1596146204 +0200
+committer Olivier Mounicq <mounicq@gmail.com> 1596146204 +0200
+
+2nd commit : add the python file
+```
+
+Let's check what contains this tree ! 
+
+```command
+C:\GIT-1st-example> git cat-file -p bca0
+```
+
+Well , there are our first file _readme.md_ and also the _src_ directory.
+
+```command
+100644 blob f719f6ba8069fff67026125d461f28f9424caed7    readme.md
+040000 tree df311d344734adc6e7cbea60c3e31987f855a9fe    src
+```
+
+Let's verify the content of the blob:
+
+```command
+C:\GIT-1st-example> git cat-file -p f719
+```
+
+And it's our first file without doubt:
+
+```command
+GIT : How it works ?
+```
+
+Ok. Let's dig the branch of the tree! 
+
+```command
+C:\GIT-1st-example> git cat-file -p df31
+```
+
+And we get that:
+
+```command
+100644 blob 9f0c98d2a3e28f6e982067535699136a573385a9    helloworld.py
+```
+
+
+And finally, we have the python file:
+
+```command
+C:\GIT-1st-example> git cat-file -p 9f0c
+```
+
+```command
+#!/usr/bin/env python3
+
+print("Hello World!")
+```
+
