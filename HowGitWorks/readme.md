@@ -95,13 +95,61 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+But nothing has been adding in the object model :
+
+```console 
+C:\GIT-1st-example\> cd .git
+C:\GIT-1st-example\.git> tree /f
+```
+
+```console
+Folder PATH listing for volume Windows
+Volume serial number is 7E3E-9A68
+C:.
+│   config
+│   description
+│   HEAD
+│
+├───hooks
+│       applypatch-msg.sample
+│       commit-msg.sample
+│       fsmonitor-watchman.sample
+│       post-update.sample
+│       pre-applypatch.sample
+│       pre-commit.sample
+│       pre-merge-commit.sample
+│       pre-push.sample
+│       pre-rebase.sample
+│       pre-receive.sample
+│       prepare-commit-msg.sample
+│       update.sample
+│
+├───info
+│       exclude
+│
+├───objects
+│   ├───info
+│   └───pack
+└───refs
+    ├───heads
+    └───tags
+```
+
+And we will add this file. There are different ways : either by naming the file _git add readme.md_ or by doing a adding group _git add ._
+
+```console
+C:\GIT-1st-example\.git> cd..
+C:\GIT-1st-example> git add .
+```
 
 
 
 
-
-
-
+   
+       
+           
+               
+               
 
 
 
