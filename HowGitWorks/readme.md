@@ -1,4 +1,4 @@
-```console
+```cmd
 >mkdir GitExmple
 >cd GitExample
 >git init
