@@ -199,60 +199,14 @@ C:.
     └───tags
 ```
        
-An object is pair of key-value and the key is the hash of the file. The nade of the node (it's a blob) _19f6ba8069fff67026125d461f28f9424caed7_ is the hash of the file _readme.md_  
+An object is pair of key-value and the key is the hash of the file. The nade of the node (it's a blob) _f7/19f6ba8069fff67026125d461f28f9424caed7_ is the hash of the file _readme.md_  
 
-Let get the hash code of the _readme.txt_ file 
+Let get the hash code of the _readme.txt_ file. And we use a plumbing command:
 
-
-               
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-```cmd
->mkdir GitExmple
->cd GitExample
->git init
->cd .git
+```console 
+C:\GIT-1st-example\.git> cd..
+C:\GIT-1st-example> git hash-oject readme.txt
+f719f6ba8069fff67026125d461f28f9424caed7
 ```
 
-```console
->tree /f
-│   config
-│   description
-│   HEAD
-│
-├───hooks
-│       applypatch-msg.sample
-│       commit-msg.sample
-│       fsmonitor-watchman.sample
-│       post-update.sample
-│       pre-applypatch.sample
-│       pre-commit.sample
-│       pre-merge-commit.sample
-│       pre-push.sample
-│       pre-rebase.sample
-│       pre-receive.sample
-│       prepare-commit-msg.sample
-│       update.sample
-│
-├───info
-│       exclude
-│
-├───objects
-│   ├───info
-│   └───pack
-└───refs
-    ├───heads
-    └───tags
-```
+
