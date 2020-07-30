@@ -22,14 +22,14 @@ svn log -q | awk -F '|' '/^r/ {sub("^ ", "", $2); sub(" $", "", $2); print $2" =
 _#Remark #2_: beware about the output file encoding. We have to force the encoding to ASCII mode otherwise the powershell default encoding mode is not recognize by the git command.  
 
 4/ Clone the svn repo by using the GIT command git svn clone :  
-```powershell
+```bat
 git svn clone https://srv-www-04.finaveo.local:8443/svn/upsideo/retro --prefix=svn/ --no-metadata --authors-file "dev-list.txt" --stdlayout E:\Retro-OUT-For-Git-WorkingDir  
 ```
 
 5/ Go to the working directory (here E:\Retro-OUT-For-Git-WorkingDir)
 
 6/ Add the remote branch  
-```powershell
+```bat
 git remote add origin https://tfs.upsideo.net/tfs/lmep/lmep/_git/lmep  
 ```
 
