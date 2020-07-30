@@ -212,7 +212,23 @@ f719f6ba8069fff67026125d461f28f9424caed7
 And to get the content saved into the blob, we will use another plumbiong command : _git cat-file_ : 
 
 ```console
-C:\GIT-1st-example\.git> git cat-file -p f719
+C:\GIT-1st-example> git cat-file -p f719
 GIT : How it works ?
 ```
 _Remark:_ you does not need to type all the hash code after _cat-file -p_, but only 4 characters (minimal quantity, but if several blob share the same 4 first characters, you have to type more character in order to identify the blob) 
+
+Now, we will create a new directory named _src_ and we will add a new file named _helloworld.py_ :
+
+```console
+C:\GIT-1st-example> mkdir src 
+C:\GIT-1st-example> cd src
+C:\GIT-1st-example\src> notepad helloworld.py
+```
+
+And the file content is :
+
+```py
+#!/usr/bin/env python3
+
+print("Hello World!")
+```
