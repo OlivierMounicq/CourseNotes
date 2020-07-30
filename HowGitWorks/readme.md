@@ -385,5 +385,51 @@ print("Hello World!")
 
 ### 5/ File updating and GIT object model
 
-Add update the first line in the _readme.md_ file : ```# GIT : How it works ?```
+Update the first line in the _readme.md_ file : ```# GIT : How it works ?```
 
+And commit the change :
+
+```command
+C:\GIT-1st-example> git add readme.md
+C:\GIT-1st-example> git commit -m "3rd commit: update the readme.md file"
+C:\GIT-1st-example> git log -1
+```
+
+```command
+commit fc93073f21a8f4f6a7b971c20f8991db0bbf9b01 (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Fri Jul 31 00:29:55 2020 +0200
+
+    3rd commit: update the readme.md file
+```
+
+```commmand
+C:\GIT-1st-example> git cat-file -p fc93
+```
+
+And now we can notify that the blob contains different informations:
+- the actual tree with a new hash code  
+- parent commit with the same hash code  
+
+```command
+tree c2ac1892c42ef7f7b89ce2cd76235f5de438005b
+parent 4255c42db81d12a8824cd3c64862bdb1404faa04
+author Olivier Mounicq <mounicq@gmail.com> 1596148195 +0200
+committer Olivier Mounicq <mounicq@gmail.com> 1596148195 +0200
+
+3rd commit: update the readme.md file
+```
+
+And in the 
+
+```command
+C:\GIT-1st-example> git cat-file -p c2ac
+```
+
+```command
+100644 blob 5d7e3a1d0ed920a518e55296edce54e62f5038d9    readme.md
+040000 tree df311d344734adc6e7cbea60c3e31987f855a9fe    src
+```
+
+- _readme.md_ file has been updated => new hash code : 5d7e3a1d0ed920a518e55296edce54e62f5038d9 (before f719f6ba8069fff67026125d461f28f9424caed7)  
+- the subtree : no change => GIT uses the same hashcode until we perform an update into one of the item contained in this subtree.
