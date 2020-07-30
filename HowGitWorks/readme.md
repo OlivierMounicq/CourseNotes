@@ -155,7 +155,7 @@ Changes to be committed:
         new file:   readme.md
 ```
 
-And the object model has been updated too. New objects have beene added in _objects_ directory: 
+And the object model has been updated too. New objects have been added in _objects_ directory: 
 
 ```console
 C:\GIT-1st-example> cd .git
@@ -199,7 +199,11 @@ C:.
     └───tags
 ```
        
-An object is pair of key-value and the key is the hash of the content
+An object is pair of key-value and the key is the hash of the file. The nade of the node (it's a blob) _19f6ba8069fff67026125d461f28f9424caed7_ is the hash of the file _readme.md_  
+
+Let get the hash code of the _readme.txt_ file 
+
+
                
                
 
