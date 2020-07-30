@@ -27,10 +27,14 @@ The GIT object types:
 - Commit  
 - Annoted Tag  
 
+### 4/ First example
 
-
-
-
+```bat
+C:\> mkdir GIT-1st-example 
+C:\> cd  GIT-1st-example
+C:\> cd .git
+C:\> tree /f 
+```
 
 
 
