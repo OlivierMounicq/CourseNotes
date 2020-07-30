@@ -29,12 +29,14 @@ The GIT object types:
 
 ### 4/ First example
 
+We will create a new directory to manipulate the GIT object model. We have to initialize this local repository.
+
 ```console
 C:\> mkdir GIT-1st-example 
 C:\> cd  GIT-1st-example
 C:\GIT-1st-example> git init
-C:\> cd .git
-C:\> tree /f 
+C:\GIT-1st-example\.git> cd .git
+C:\GIT-1st-example\.git> tree /f 
 ```
 
 We can see the GIT object model:
@@ -69,6 +71,46 @@ C:.
     ├───heads
     └───tags
 ```
+
+Now we add a new text file in the directory  
+
+```console
+C:\GIT-1st-example\.git> cd..
+C:\GIT-1st-example> notepad readme.md
+```
+
+And we add this content into the file : "GIT : How it works ?" (save and close notepad)  
+And we can notify that GIT has detected a new file :
+
+```console
+C:\GIT-1st-example>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
