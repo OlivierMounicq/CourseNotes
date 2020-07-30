@@ -76,21 +76,19 @@ PS E:\Retro-OUT-For-Git-WorkingDir> git merge master
 PS E:\Retro-OUT-For-Git-WorkingDir> git push origin UPSIDEV 
 ```
 
-
-
-
+All the steps of the workflow
 
 ```bat
-mkdir E:\Retro-OUT-For-Git
-mkdir E:\Retro-OUT-For-Git-WorkingDir
-svn checkout https://srv-www-04.finaveo.local:8443/svn/upsideo/retro/trunk E:\Retro-OUT-For-Git
-cd E:\Retro-OUT-For-Git
-git svn clone https://srv-www-04.finaveo.local:8443/svn/upsideo/retro --prefix=svn/ --no-metadata --authors-file "dev-list.txt" --stdlayout E:\Retro-OUT-For-Git-WorkingDir  
-cd E:\Retro-OUT-For-Git-WorkingDir
-git remote add origin https://tfs.upsideo.net/tfs/lmep/lmep/_git/lmep
-git fetch
-git pull origin UPSIDEV --allow-unrelated-histories
-git checkout UPSIDEV
-git merge master
-git push origin UPSIDEV
+PS E:\> mkdir E:\Retro-OUT-For-Git
+PS E:\> mkdir E:\Retro-OUT-For-Git-WorkingDir
+PS E:\> svn checkout https://srv-www-04.finaveo.local:8443/svn/upsideo/retro/trunk E:\Retro-OUT-For-Git
+PS E:\> cd E:\Retro-OUT-For-Git
+PS E:\Retro-OUT-For-Git> git svn clone https://srv-www-04.finaveo.local:8443/svn/upsideo/retro --prefix=svn/ --no-metadata --authors-file "dev-list.txt" --stdlayout E:\Retro-OUT-For-Git-WorkingDir  
+PS E:\Retro-OUT-For-Git> cd E:\Retro-OUT-For-Git-WorkingDir
+PS E:\Retro-OUT-For-Git-WorkingDir> git remote add origin https://tfs.upsideo.net/tfs/lmep/lmep/_git/lmep
+PS E:\Retro-OUT-For-Git-WorkingDir> git fetch
+PS E:\Retro-OUT-For-Git-WorkingDir> git pull origin UPSIDEV --allow-unrelated-histories
+PS E:\Retro-OUT-For-Git-WorkingDir> git checkout UPSIDEV
+PS E:\Retro-OUT-For-Git-WorkingDir> git merge master
+PS E:\Retro-OUT-For-Git-WorkingDir> git push origin UPSIDEV
 ```
