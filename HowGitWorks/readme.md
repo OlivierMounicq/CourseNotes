@@ -29,9 +29,10 @@ The GIT object types:
 
 ### 4/ First example
 
-```cmd
+```console
 C:\> mkdir GIT-1st-example 
 C:\> cd  GIT-1st-example
+C:\GIT-1st-example> git init
 C:\> cd .git
 C:\> tree /f 
 ```
