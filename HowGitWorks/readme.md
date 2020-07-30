@@ -29,7 +29,7 @@ The GIT object types:
 
 ### 4/ First example
 
-```bat
+```cmd
 C:\> mkdir GIT-1st-example 
 C:\> cd  GIT-1st-example
 C:\> cd .git
