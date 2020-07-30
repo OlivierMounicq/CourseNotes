@@ -135,19 +135,71 @@ C:.
     └───tags
 ```
 
-And we will add this file. There are different ways : either by naming the file _git add readme.md_ or by doing a adding group _git add ._
+And we will add this file. There are different ways : either by naming the file _git add readme.md_ or by doing a adding group _git add ._ (git add _dot_)
 
 ```console
 C:\GIT-1st-example\.git> cd..
 C:\GIT-1st-example> git add .
 ```
 
+And the status has changed:
 
+```console 
+C:\GIT-1st-example> git status
+On branch master
 
+No commits yet
 
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   readme.md
+```
+
+And the object model has been updated too. New objects have beene added in _objects_ directory: 
+
+```console
+C:\GIT-1st-example> cd .git
+C:\GIT-1st-example\.git> tree /f
+```
    
+```console
+Folder PATH listing for volume Windows
+Volume serial number is 7E3E-9A68
+C:.
+│   config
+│   description
+│   HEAD
+│   index
+│
+├───hooks
+│       applypatch-msg.sample
+│       commit-msg.sample
+│       fsmonitor-watchman.sample
+│       post-update.sample
+│       pre-applypatch.sample
+│       pre-commit.sample
+│       pre-merge-commit.sample
+│       pre-push.sample
+│       pre-rebase.sample
+│       pre-receive.sample
+│       prepare-commit-msg.sample
+│       update.sample
+│
+├───info
+│       exclude
+│
+├───objects
+│   ├───f7
+│   │       19f6ba8069fff67026125d461f28f9424caed7
+│   │
+│   ├───info
+│   └───pack
+└───refs
+    ├───heads
+    └───tags
+```
        
-           
+An object is pair of key-value and the key is the hash of the content
                
                
 
