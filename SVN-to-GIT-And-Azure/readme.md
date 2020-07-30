@@ -59,3 +59,29 @@ git merge master
 ```bat
 git push origin UPSIDEV 
 ```
+
+
+
+
+
+```bat
+
+mkdir E:\Retro-OUT-For-Git
+mkdir E:\Retro-OUT-For-Git-WorkingDir
+cd E:\Retro-OUT-For-Git
+
+
+git svn clone https://srv-www-04.finaveo.local:8443/svn/upsideo/retro --prefix=svn/ --no-metadata --authors-file "dev-list.txt" --stdlayout E:\Retro-OUT-For-Git-WorkingDir  
+cd E:\Retro-OUT-For-Git-WorkingDir
+git remote add origin https://tfs.upsideo.net/tfs/lmep/lmep/_git/lmep
+git fetch
+git pull origin UPSIDEV --allow-unrelated-histories
+git checkout UPSIDEV
+git merge master
+git push origin UPSIDEV
+```
+
+
+
+
+
