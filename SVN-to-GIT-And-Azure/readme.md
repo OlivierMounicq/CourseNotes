@@ -38,9 +38,9 @@ git remote add origin https://tfs.upsideo.net/tfs/lmep/lmep/_git/lmep
 7/Get the remote branches  
 ```bat
 git fetch  
-```powershell
+```
 
-8/
+8/ 
 ```bat
 git pull origin UPSIDEV --allow-unrelated-histories  
 ```
