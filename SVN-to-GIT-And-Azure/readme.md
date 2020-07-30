@@ -17,7 +17,9 @@ svn.exe log --quiet | ? { $_ -notlike '-*' } | % { "{0} = {0} <{0}>" -f ($_ -spl
 ```
 
 _Remark #1_: an alternative way to get the list is to use a command in the GIT bash console (with awk command):  
+```bat
 svn log -q | awk -F '|' '/^r/ {sub("^ ", "", $2); sub(" $", "", $2); print $2" = "$2" <"$2">"}' | sort -u > dev-list.txt  
+```
 
 _#Remark #2_: beware about the output file encoding. We have to force the encoding to ASCII mode otherwise the powershell default encoding mode is not recognize by the git command.  
 
@@ -34,18 +36,26 @@ git remote add origin https://tfs.upsideo.net/tfs/lmep/lmep/_git/lmep
 ```
 
 7/Get the remote branches  
-```powershell
+```bat
 git fetch  
 ```powershell
 
 8/
+```bat
 git pull origin UPSIDEV --allow-unrelated-histories  
+```
 
-9/ Load the code source from the branch origin UPSIDEV
+9/ Load the code source from the branch origin UPSIDEV  
+```bat
 git checkout UPSIDEV  
+```
 
 10/ Merge the branch Master (this branch contains the SVN code) onto the origin UPSIDEV branch  
+```bat
 git merge master  
+```
 
-11/ Push the code to   
+11/ Push the code to  
+```bat
 git push origin UPSIDEV 
+```
