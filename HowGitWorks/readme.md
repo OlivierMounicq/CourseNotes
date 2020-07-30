@@ -1,3 +1,39 @@
+## GIT : How it works
+
+### 1/ Porcelain commands & plumbing commands
+
+The porcelain commands:  
+- git add  
+- git pull  
+- git commit  
+- ..  
+
+The plumbing command:  
+- git cat-file  
+- git hash-object  
+- git count-objects  
+
+### 2/ GIT definition  
+
+GIT = Distributed Revision Control System  
+
+GIT =  Persistent Map + Content Tracker + Revision Control System + Distributed Revision Control System  
+
+### 3/ Git objects
+
+The GIT object types:  
+- Blob    
+- Tree  
+- Commit  
+- Annoted Tag  
+
+
+
+
+
+
+
+
 ```cmd
 >mkdir GitExmple
 >cd GitExample
