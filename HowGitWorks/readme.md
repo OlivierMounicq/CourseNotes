@@ -383,3 +383,7 @@ C:\GIT-1st-example> git cat-file -p 9f0c
 print("Hello World!")
 ```
 
+### 5/ File updating and GIT object model
+
+Add update the first line in the _readme.md_ file : ```# GIT : How it works ?```
+
