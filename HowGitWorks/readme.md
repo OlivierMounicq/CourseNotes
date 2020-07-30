@@ -432,4 +432,4 @@ C:\GIT-1st-example> git cat-file -p c2ac
 ```
 
 - _readme.md_ file has been updated => new hash code : 5d7e3a1d0ed920a518e55296edce54e62f5038d9 (before f719f6ba8069fff67026125d461f28f9424caed7)  
-- the subtree : no change => GIT uses the same hashcode until we perform an update into one of the items contained in this subtree.
+- the subtree : no change => GIT uses the same hashcode until we perform an update in this subtree.
