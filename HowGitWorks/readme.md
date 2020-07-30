@@ -209,4 +209,10 @@ C:\GIT-1st-example> git hash-oject readme.txt
 f719f6ba8069fff67026125d461f28f9424caed7
 ```
 
+And to get the content saved into the blob, we will use another plumbiong command : _git cat-file_ : 
 
+```console
+C:\GIT-1st-example\.git> git cat-file -p f719
+GIT : How it works ?
+```
+_Remark:_ you does not need to type all the hash code after _cat-file -p_, but only 4 characters (minimal quantity, but if several blob share the same 4 first characters, you have to type more character in order to identify the blob) 
