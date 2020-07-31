@@ -92,3 +92,10 @@ PS E:\Retro-OUT-For-Git-WorkingDir> git checkout UPSIDEV
 PS E:\Retro-OUT-For-Git-WorkingDir> git merge master
 PS E:\Retro-OUT-For-Git-WorkingDir> git push origin UPSIDEV
 ```
+
+
+
+### Links
+
+[Learn how to migrate from Subversion (SVN) to Git, including history](https://docs.microsoft.com/en-us/azure/devops/repos/git/perform-migration-from-svn-to-git?view=azure-devops)  
+[HOW EASY IT’S TO MIGRATE SVN TO TFS 2013 ](https://blogs.incyclesoftware.com/2013/08/how-easy-its-to-migrate-svn-to-tfs-2013-git-repo/)  
