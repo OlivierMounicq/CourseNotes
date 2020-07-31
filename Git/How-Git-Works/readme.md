@@ -439,3 +439,34 @@ C:\GIT-1st-example> git cat-file -p c2ac
 
 ### 6/ Branching & Merging
 
+#### 6.1/ Branch
+
+A branch = just a reference to a commit.  
+
+Up to now, there is only one branch : the _master_ branch. The branches are located in .git/refs/heads/.  
+If you want to know   
+
+Windows command:
+```command
+C:\GIT-1st-example> more .git\refs\heads\master
+fc93073f21a8f4f6a7b971c20f8991db0bbf9b01
+```
+
+Linux or Mac command
+```command
+olivier~GIT-1st-example> cat .git\refs\heads\master
+```
+
+The _master_ branch points to the last commit : fc93073f21a8f4f6a7b971c20f8991db0bbf9b01
+
+```command
+C:\GIT-1st-example> git log -1
+commit fc93073f21a8f4f6a7b971c20f8991db0bbf9b01 (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Fri Jul 31 00:29:55 2020 +0200
+
+    3rd commit: update the readme.md file
+```
+
+The HEAD contains the current branch.
+
