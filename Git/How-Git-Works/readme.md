@@ -468,5 +468,10 @@ Date:   Fri Jul 31 00:29:55 2020 +0200
     3rd commit: update the readme.md file
 ```
 
-The HEAD contains the current branch.
+#### 6.1/ HEAD
+
+The HEAD contains the current branch.  
+ When we do a checkout, we move the HEAD pointer and update the working area.  
+ 
+ 
 
