@@ -612,6 +612,11 @@ So the object model is :
 
 
 
+
+-----
+-----
+-----
+
 ### 5/ File updating and GIT object model
 
 Update the first line in the _readme.md_ file : ```# GIT : How it works ?```
