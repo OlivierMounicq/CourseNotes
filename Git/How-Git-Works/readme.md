@@ -351,7 +351,7 @@ GIT : How it works ?
 
 So the object model is :
 
-
+![GitHub Logo](/Img/GIT-01.png)
 
 
 ```console
