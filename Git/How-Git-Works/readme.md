@@ -21,6 +21,8 @@ GIT = Distributed Revision Control System
 
 GIT =  Persistent Map + Content Tracker + Revision Control System + Distributed Revision Control System  
 
+-----
+
 ### 3/ Git objects
 
 The GIT object types:  
@@ -28,6 +30,8 @@ The GIT object types:
 - Tree  
 - Commit  
 - Annoted Tag  
+
+-----
 
 ### 4/ First example : first commit
 
@@ -75,6 +79,8 @@ C:.
     ├───heads
     └───tags
 ```
+
+-----
 
 #### 4.2/ Add yout work to the repository and commit
 
@@ -308,6 +314,7 @@ C:\GIT-1ST-EXAMPLE\.GIT
     └───tags
 ```
 
+-----
 
 #### 4.3/ The object model after the first commit
 
