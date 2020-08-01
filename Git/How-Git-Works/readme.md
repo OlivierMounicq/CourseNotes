@@ -27,7 +27,9 @@ The GIT object types:
 - Commit  
 - Annoted Tag  
 
-### 4/ First example
+### 4/ First example : first commit
+
+#### 4.1/ Initialize the local repository
 
 We will create a new directory to manipulate the GIT object model. We have to initialize this local repository.
 
@@ -71,6 +73,8 @@ C:.
     ├───heads
     └───tags
 ```
+
+#### 4.2/ Add yout work to the repository and commit
 
 Now we add a new text file in the directory  
 
@@ -222,6 +226,165 @@ Commit the current work
 ```console
 C:\GIT-1st-example> git commit -m "1st commit : add the readme.md file"
 ```
+And GIT returns : 
+
+```console
+[master (root-commit) 773d9db] 1st commit : add the readme.md file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+```
+
+Check the history :
+
+```console
+C:\GIT-1st-example> git log
+```
+And we get:
+
+```console
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9 (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
+```
+
+As we can see, others GIT objects have been added in the object model:
+
+```console
+C:\GIT-1st-example> tree /f .git
+```
+
+```console
+C:\GIT-1ST-EXAMPLE\.GIT
+│   COMMIT_EDITMSG
+│   config
+│   description
+│   HEAD
+│   index
+│
+├───hooks
+│       applypatch-msg.sample
+│       commit-msg.sample
+│       fsmonitor-watchman.sample
+│       post-update.sample
+│       pre-applypatch.sample
+│       pre-commit.sample
+│       pre-merge-commit.sample
+│       pre-push.sample
+│       pre-rebase.sample
+│       pre-receive.sample
+│       prepare-commit-msg.sample
+│       update.sample
+│
+├───info
+│       exclude
+│
+├───logs
+│   │   HEAD
+│   │
+│   └───refs
+│       └───heads
+│               master
+│
+├───objects
+│   ├───50
+│   │       d6ed774db41e7b84487fbf07b2b6f3ed268ac6
+│   │
+│   ├───77
+│   │       3d9db6288817fd69c3b374017b85cd9ef7c1b9
+│   │
+│   ├───f7
+│   │       19f6ba8069fff67026125d461f28f9424caed7
+│   │
+│   ├───info
+│   └───pack
+└───refs
+    ├───heads
+    │       master
+    │
+    └───tags
+```
+
+
+#### 4.3/ The object model after the first commit
+
+Let's dicover the object model by starting from the root object : the _commit object_.  
+To get the hash code of the 1st commit, let's using the _git log_ command :   
+
+```console
+C:\GIT-1st-example> git log
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9 (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
+```
+
+The hash code of the commit object is : 773d9db6288817fd69c3b374017b85cd9ef7c1b9.
+
+```console
+C:\GIT-1st-example> git cat-file -p 773d
+tree 50d6ed774db41e7b84487fbf07b2b6f3ed268ac6
+author Olivier Mounicq <mounicq@gmail.com> 1596295385 +0200
+committer Olivier Mounicq <mounicq@gmail.com> 1596295385 +0200
+
+1st commit : add the readme.md file
+```
+
+This node has only one child:
+- a _tree object_ : 50d6ed774db41e7b84487fbf07b2b6f3ed268ac6  
+
+Let's dig into the _tree_ object :
+
+```console
+C:\GIT-1st-example> git cat-file -p 50d6
+100644 blob f719f6ba8069fff67026125d461f28f9424caed7    readme.md
+```
+
+So the _tree_ has only child : a blob containing the readme.md file
+
+
+```console
+git cat-file -p f719f
+GIT : How it works ?
+```
+
+
+
+
+```console
+├───objects
+│   ├───50
+│   │       d6ed774db41e7b84487fbf07b2b6f3ed268ac6  : tree object
+│   │
+│   ├───77
+│   │       3d9db6288817fd69c3b374017b85cd9ef7c1b9  : commit object
+│   │
+│   ├───f7
+│   │       19f6ba8069fff67026125d461f28f9424caed7  : blob object 
+│   │
+│   ├───info
+│   └───pack
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ------
 
