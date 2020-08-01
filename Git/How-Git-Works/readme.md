@@ -382,7 +382,6 @@ So the object model is :
 
 
 
-
 ------
 
 #### 4.4 / Second commit and object model
