@@ -610,7 +610,17 @@ So the object model is :
 
 ![GitHub Logo](Img/GIT-02.png)
 
+#### 4.5/ Third commit
 
+Now we want to update the _readme.md_ file. Update the first line in the _readme.md_ file : ```# GIT : How it works ?```
+
+```command
+C:\GIT-1st-example> git add readme.md
+C:\GIT-1st-example> git commit -m "3rd commit : update the readme.md file"
+C:\GIT-1st-example> git log -1
+```
+
+![GitHub Logo](Img/GIT-03.png)
 
 
 -----
