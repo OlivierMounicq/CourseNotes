@@ -13,6 +13,8 @@ The plumbing command:
 - git hash-object  
 - git count-objects  
 
+-----
+
 ### 2/ GIT definition  
 
 GIT = Distributed Revision Control System  
