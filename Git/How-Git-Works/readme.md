@@ -205,7 +205,7 @@ Let get the hash code of the _readme.txt_ file. And we use a plumbing command:
 
 ```console 
 C:\GIT-1st-example\.git> cd..
-C:\GIT-1st-example> git hash-oject readme.txt
+C:\GIT-1st-example> git hash-oject readme.md
 f719f6ba8069fff67026125d461f28f9424caed7
 ```
 
@@ -216,6 +216,14 @@ C:\GIT-1st-example> git cat-file -p f719
 GIT : How it works ?
 ```
 _Remark:_ you does not need to type all the hash code after _cat-file -p_, but only 4 characters (minimal quantity, but if several blob share the same 4 first characters, you have to type more character in order to identify the blob) 
+
+Commit the current work  
+
+```console
+C:\GIT-1st-example> git commit -m "1st commit : add the readme.md file"
+```
+
+------
 
 Now, we will create a new directory named _src_ and we will add a new file named _helloworld.py_ :
 
