@@ -414,7 +414,7 @@ And we can see that some objects have been added in the _objects_ subdirectory:
 ```console
 Folder PATH listing for volume Windows
 Volume serial number is 7E3E-9A68
-C:.
+C.
 │   COMMIT_EDITMSG
 │   config
 │   description
@@ -446,8 +446,14 @@ C:.
 │               master
 │
 ├───objects
-│   ├───42
-│   │       55c42db81d12a8824cd3c64862bdb1404faa04
+│   ├───50
+│   │       d6ed774db41e7b84487fbf07b2b6f3ed268ac6
+│   │
+│   ├───77
+│   │       3d9db6288817fd69c3b374017b85cd9ef7c1b9
+│   │
+│   ├───7f
+│   │       a1839dddcb6166f90d2eb4cb0429cfdef94edc
 │   │
 │   ├───9f
 │   │       0c98d2a3e28f6e982067535699136a573385a9
@@ -477,26 +483,53 @@ C:\GIT-1st-example> git log
 ```
 
 ```command
-commit 4255c42db81d12a8824cd3c64862bdb1404faa04 (HEAD -> master)
+commit 7fa1839dddcb6166f90d2eb4cb0429cfdef94edc (HEAD -> master)
 Author: Olivier Mounicq <mounicq@gmail.com>
-Date:   Thu Jul 30 23:56:44 2020 +0200
+Date:   Sat Aug 1 22:36:07 2020 +0200
 
     2nd commit : add the python file
+
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
 ```
 
-The commit had a related hash code : _4255c42db81d12a8824cd3c64862bdb1404faa04_ . Let discover what this blob contains :
+There are 2 commits.
+
+The commit had a related hash code : _7fa1839dddcb6166f90d2eb4cb0429cfdef94edc_ . Let discover what this blob contains :
 
 ```command
-C:\GIT-1st-example> git cat-file -p 4255
+C:\GIT-1st-example> git cat-file -p 7fa1
 ```
 So this blob is a _commit_ and it contains a tree _bca043fe83ede3a8d5385e723dccec4b74dd15c6_
 
 ```command
 tree bca043fe83ede3a8d5385e723dccec4b74dd15c6
-author Olivier Mounicq <mounicq@gmail.com> 1596146204 +0200
-committer Olivier Mounicq <mounicq@gmail.com> 1596146204 +0200
+parent 773d9db6288817fd69c3b374017b85cd9ef7c1b9
+author Olivier Mounicq <mounicq@gmail.com> 1596314167 +0200
+committer Olivier Mounicq <mounicq@gmail.com> 1596314167 +0200
 
 2nd commit : add the python file
+```
+
+This commit has two children:  
+- a parent commit : 773d9db6288817fd69c3b374017b85cd9ef7c1b9  => the first commit
+- a tree object : bca043fe83ede3a8d5385e723dccec4b74dd15c6
+
+Let's start to verify the content of the parent
+
+```command
+C:\GIT-1st-example> git cat-file -p 773d
+```
+
+```command
+tree 50d6ed774db41e7b84487fbf07b2b6f3ed268ac6
+author Olivier Mounicq <mounicq@gmail.com> 1596295385 +0200
+committer Olivier Mounicq <mounicq@gmail.com> 1596295385 +0200
+
+1st commit : add the readme.md file
 ```
 
 Let's check what contains this tree ! 
@@ -548,6 +581,33 @@ C:\GIT-1st-example> git cat-file -p 9f0c
 
 print("Hello World!")
 ```
+
+So the object model is :
+
+```command
+├───objects
+│   ├───50
+│   │       d6ed774db41e7b84487fbf07b2b6f3ed268ac6  : root tree object of the first commit
+│   │
+│   ├───77
+│   │       3d9db6288817fd69c3b374017b85cd9ef7c1b9  : the first commit node (the parent node)
+│   │
+│   ├───7f
+│   │       a1839dddcb6166f90d2eb4cb0429cfdef94edc  : the second commit node
+│   │
+│   ├───9f
+│   │       0c98d2a3e28f6e982067535699136a573385a9  : the src/helloworld.py blob
+│   │
+│   ├───bc
+│   │       a043fe83ede3a8d5385e723dccec4b74dd15c6  : the tree node (1st level of the tree)
+│   │
+│   ├───df
+│   │       311d344734adc6e7cbea60c3e31987f855a9fe  : the tree node (2nd level of the tree : /src)
+│   │
+│   ├───f7
+│   │       19f6ba8069fff67026125d461f28f9424caed7  : readme.md blob
+```
+
 [![](https://mermaid.ink/img/eyJjb2RlIjoiJSV7aW5pdDoge1widGhlbWVcIjogXCJmb3Jlc3RcIiwgXCJsb2dMZXZlbFwiOiAxIH19JSVcbmdyYXBoIFREXG5BWyBjb21taXQgIzQyNTUgXSAtLT4gQlsgdHJlZSAjYmNhMCAgXVxuQiAtLT4gQ1sgYmxvYiAjZjcxOSA6IHJlYWRtZS5tZCBdXG5CIC0tPiBEWyB0cmVlICNkZjMxXVxuRCAtLT4gRVsgYmxvYiAjOWYwYyA6IGhlbGxvd29ybGQucHldXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRhcmsifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/docs/mermaid-live-editor-beta/#/edit/eyJjb2RlIjoiJSV7aW5pdDoge1widGhlbWVcIjogXCJmb3Jlc3RcIiwgXCJsb2dMZXZlbFwiOiAxIH19JSVcbmdyYXBoIFREXG5BWyBjb21taXQgIzQyNTUgXSAtLT4gQlsgdHJlZSAjYmNhMCAgXVxuQiAtLT4gQ1sgYmxvYiAjZjcxOSA6IHJlYWRtZS5tZCBdXG5CIC0tPiBEWyB0cmVlICNkZjMxXVxuRCAtLT4gRVsgYmxvYiAjOWYwYyA6IGhlbGxvd29ybGQucHldXG5cdFx0IiwibWVybWFpZCI6eyJ0aGVtZSI6ImRhcmsifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
 
 ### 5/ File updating and GIT object model
