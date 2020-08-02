@@ -678,7 +678,7 @@ If you want to know
 Windows command:
 ```command
 C:\GIT-1st-example> more .git\refs\heads\master
-fc93073f21a8f4f6a7b971c20f8991db0bbf9b01
+1f0c4f2bba806387fc7e8c497dcdb5e5f88f2eda
 ```
 
 Linux or Mac command
@@ -686,15 +686,15 @@ Linux or Mac command
 olivier~GIT-1st-example> cat .git\refs\heads\master
 ```
 
-The _master_ branch points to the last commit : fc93073f21a8f4f6a7b971c20f8991db0bbf9b01
+The _master_ branch points to the last commit : 1f0c4f2bba806387fc7e8c497dcdb5e5f88f2eda
 
 ```command
 C:\GIT-1st-example> git log -1
-commit fc93073f21a8f4f6a7b971c20f8991db0bbf9b01 (HEAD -> master)
+commit 1f0c4f2bba806387fc7e8c497dcdb5e5f88f2eda (HEAD -> master)
 Author: Olivier Mounicq <mounicq@gmail.com>
-Date:   Fri Jul 31 00:29:55 2020 +0200
+Date:   Sat Aug 1 23:42:45 2020 +0200
 
-    3rd commit: update the readme.md file
+    3rd commit : update the readme.md file
 ```
 
 #### 5.1/ HEAD
@@ -702,5 +702,89 @@ Date:   Fri Jul 31 00:29:55 2020 +0200
 The HEAD contains the current branch.  
  When we do a checkout, we move the HEAD pointer and update the working area.  
  
+ After the 3rd commit, we have only two files:
  
+ ```command
+ C:\GIT-2nd-example\readme.md
+ C:\GIT-2nd-example\src\helloworld.py
+ ```
+ 
+ Let's check out the first commit by using its hash code:
+ 
+ 
+```command
+C:\GIT-1st-example> git log
+commit 1f0c4f2bba806387fc7e8c497dcdb5e5f88f2eda (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 23:42:45 2020 +0200
+
+    3rd commit : update the readme.md file
+
+commit 7fa1839dddcb6166f90d2eb4cb0429cfdef94edc
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 22:36:07 2020 +0200
+
+    2nd commit : add the python file
+
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
+```
+
+And notify this information : __HEAD -> master__ So the HEAD point to the master
+
+
+So the first commit hash code is 773d. 
+
+```command
+C:\GIT-1st-example> git checkout 773d
+```
+
+And GIT returns
+
+
+```command
+Note: switching to '773d'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 773d9db 1st commit : add the readme.md file
+```
+
+Now the HEAD pointer is detached from the master branch.
+
+And the content of the directory C:\1st-GIT-Example has been reloaded with the data linked to the 1st commit: 
+
+```command
+C:\GIT-1st-example> dir /b
+readme.md
+```
+
+And back to _master_ branch
+
+```command
+C:\GIT-1st-example> git checkout master
+```
+And the _src_ subdirectory has been reloaded
+
+```command
+C:\GIT-1st-example> dir /b
+readme.md
+src
+```
 
