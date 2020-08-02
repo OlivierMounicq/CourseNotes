@@ -919,6 +919,27 @@ And the content of the file _project.md_ is
 #Project
 ```
 
+```command
+C:\GIT-1st-example> git add .
+C:\GIT-1st-example> git commit -m "4th commit : add the project"
+```
+
+```command
+C:\GIT-1st-example> git log -1
+commit 6e1e779060d8b69f23463a56c2b8a3e90b32deec (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sun Aug 2 21:42:21 2020 +0200
+
+    4th commit : add the project
+```
+
+So the commits are:  
+- branch DEV-01 : 36f74a7cbad54e1e505d0709f9d0c3e0ac02c1dd  
+- master        : 6e1e779060d8b69f23463a56c2b8a3e90b32deec  
+
+
+
+
 
 
 
