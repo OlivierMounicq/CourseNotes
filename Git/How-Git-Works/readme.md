@@ -891,6 +891,25 @@ g = input("Enter your name : ")
 print (g)
 ```
 
+```command
+C:\GIT-1st-example> git add .
+C:\GIT-1st-example> git commit -m "DEV-01 - add main.py"
+```
+
+And let's check the history : 
+```command
+C:\GIT-1st-example> git log -1
+commit 36f74a7cbad54e1e505d0709f9d0c3e0ac02c1dd (HEAD -> DEV-01)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sun Aug 2 21:24:05 2020 +0200
+
+    DEV-01 - add main.py
+```
+
+
+
+
+
 
 
 
