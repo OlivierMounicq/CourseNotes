@@ -917,7 +917,7 @@ And the content of the file _project.md_ is
 
 ```txt
 #Project
-```txt
+```
 
 
 
