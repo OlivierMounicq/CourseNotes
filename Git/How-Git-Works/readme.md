@@ -666,7 +666,7 @@ As we can see, the files containing in the _src_ subtree have not changed, there
 -----
 -----
 
-### 5/ Branching & Merging
+### 5/ HEAD
 
 #### 5.1/ Branch
 
@@ -837,3 +837,60 @@ Date:   Sat Aug 1 17:23:05 2020 +0200
 ```
 
 -----
+-----
+-----
+
+### 6/ Branching & merging
+
+#### 6.1/ Branch definition
+
+A branch = just a reference to a commit. 
+
+#### 6.2/ Command to get all branches
+
+And the command to get all branches : _git branch_
+
+```command
+C:\GIT-1st-example> git branch
+* master
+```
+
+#### 6.3/ New branch
+
+Now we will create a new branch : DEV-01
+
+```command
+C:\GIT-1st-example> git branch DEV-01
+```
+The new branch has been created but out workspace is the master branch's workspace:
+
+```command
+C:\GIT-1st-example> git branch
+  DEV-01
+* master
+```
+
+And then we checkout the new branch
+
+```command
+C:\GIT-1st-example> git checkout DEV-01
+Switched to branch 'DEV-01'
+```
+
+We create a new subdirectory called _core_
+
+```command
+C:\GIT-1st-example> mkdir core
+C:\GIT-1st-example> notepad core\main.py
+```
+
+And the content of the file is :
+
+```py
+g = input("Enter your name : ") 
+print (g)
+```
+
+
+
+
