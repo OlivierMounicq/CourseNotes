@@ -697,7 +697,9 @@ Date:   Sat Aug 1 23:42:45 2020 +0200
     3rd commit : update the readme.md file
 ```
 
-#### 5.1/ HEAD
+-----
+
+#### 5.2/ HEAD
 
 The HEAD contains the current branch.  
  When we do a checkout, we move the HEAD pointer and update the working area.  
@@ -788,3 +790,4 @@ readme.md
 src
 ```
 
+-----
