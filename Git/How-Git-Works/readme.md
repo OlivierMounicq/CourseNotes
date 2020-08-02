@@ -959,6 +959,18 @@ Merge made by the 'recursive' strategy.
  create mode 100644 project.md
  ```
  
+ And let's verify that the commit from master has been merged into the _DEV-01_ branch :
+ 
+ ```command
+C:\GIT-1st-example> dir /b
+core
+project.md
+readme.md
+src
+```
+ => the file _project.md_ file has been added in the DEV-01 _branch_
+ 
+ 
  And the history log ::
  
 ```command
@@ -1001,8 +1013,32 @@ Date:   Sat Aug 1 17:23:05 2020 +0200
     1st commit : add the readme.md file
 ```
 
+So the commits are :  
+- Merge branch 'master' into DEV-01 : 4ad6782f961b7c048aa31f33d34533df93feccda  
+- 4th commit : add the project : 6e1e779060d8b69f23463a56c2b8a3e90b32deec  
+-  DEV-01 - add main.py : 36f74a7cbad54e1e505d0709f9d0c3e0ac02c1dd  
+- 3rd commit : update the readme.md file : 1f0c4f2bba806387fc7e8c497dcdb5e5f88f2eda  
+- 2nd commit : add the python file : 7fa1839dddcb6166f90d2eb4cb0429cfdef94edc  
+- 1st commit : add the readme.md file : 773d9db6288817fd69c3b374017b85cd9ef7c1b9  
 
+And now we go back to the _master_ branch and we merge the _DEV-01_ branch into the master: 
+
+```command
+C:\GIT-1st-example> git checkout master
+```
+
+And let's verify that the subdirectory _core_ is not present yet :
+
+```command
+C:\GIT-1st-example> dir /b
+project.md
+readme.md
+src
+```
  
+Now we retrieve the commit from _DEV-01_ to _master_ branch :
+
+
  
  
 
