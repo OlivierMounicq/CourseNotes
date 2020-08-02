@@ -777,6 +777,18 @@ C:\GIT-1st-example> dir /b
 readme.md
 ```
 
+And there is only one commit in the history log
+
+```command
+C:\GIT-1st-example> git log
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9 (HEAD)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
+```
+
+
 And back to _master_ branch
 
 ```command
@@ -788,6 +800,40 @@ And the _src_ subdirectory has been reloaded
 C:\GIT-1st-example> dir /b
 readme.md
 src
+```
+
+And we get back the full history log :
+
+```command
+C:\GIT-1st-example> git log
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9 (HEAD)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
+
+C:\GIT-2nd-example>git checkout master
+Previous HEAD position was 773d9db 1st commit : add the readme.md file
+Switched to branch 'master'
+
+C:\GIT-2nd-example>git log
+commit 1f0c4f2bba806387fc7e8c497dcdb5e5f88f2eda (HEAD -> master)
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 23:42:45 2020 +0200
+
+    3rd commit : update the readme.md file
+
+commit 7fa1839dddcb6166f90d2eb4cb0429cfdef94edc
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 22:36:07 2020 +0200
+
+    2nd commit : add the python file
+
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
 ```
 
 -----
