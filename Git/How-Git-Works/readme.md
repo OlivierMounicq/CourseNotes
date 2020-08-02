@@ -1089,7 +1089,28 @@ Date:   Sat Aug 1 17:23:05 2020 +0200
     1st commit : add the readme.md file
 ```
 
- 
+#### 6.4/ The object model after the merge
+
+Let's have a look on the object model after the merge. The last commit's hash is _4ad6_ (Merge branch 'master' into DEV-01).
+
+```command
+C:\GIT-1st-example> git cat-file -p 4ad6
+tree a39f32d01f83d3f3369d2032086d9163e1c4a60b
+parent 36f74a7cbad54e1e505d0709f9d0c3e0ac02c1dd
+parent 6e1e779060d8b69f23463a56c2b8a3e90b32deec
+author Olivier Mounicq <mounicq@gmail.com> 1596400261 +0200
+committer Olivier Mounicq <mounicq@gmail.com> 1596400261 +0200
+
+Merge branch 'master' into DEV-01
+```
+
+And you can notice that this commit has _two parents_ :  
+- 36f7 : the commit _DEV-01 - add main.py_
+- 6e1e : the commit _4th commit : add the project_  
+
+
+
+
  
 
 
