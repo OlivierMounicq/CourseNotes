@@ -906,7 +906,18 @@ Date:   Sun Aug 2 21:24:05 2020 +0200
     DEV-01 - add main.py
 ```
 
+Let's go back to _master_ branch
 
+```command
+C:\GIT-1st-example> git checkout master
+C:\GIT-1st-example> notepad project.md
+```
+
+And the content of the file _project.md_ is 
+
+```txt
+#Project
+```txt
 
 
 
