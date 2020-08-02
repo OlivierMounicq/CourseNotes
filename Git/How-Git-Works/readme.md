@@ -1180,7 +1180,7 @@ We create a new subdirectory _business_ and a new file named _myapp.py_.
 ```command
 C:\GIT-1st-example> mkdir business
 C:\GIT-1st-example> notepad business\myapp.py 
-```command
+```
 
 And the file content is :
 
@@ -1202,7 +1202,7 @@ C:\GIT-1st-example> git commit -m "Detached HEAD commit - add the file business/
 [detached HEAD a70d15d] Detached HEAD commit - add the file business/myapp.py
  1 file changed, 1 insertion(+)
  create mode 100644 business/myapp.py
-```command
+```
 
 
 
