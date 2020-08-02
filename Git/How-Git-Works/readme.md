@@ -1111,11 +1111,98 @@ And you can notice that this commit has _two parents_ :
 ![GitHub Logo](Img/GIT-04.png)
 
 
- 
+-----
+-----
+-----
+
+### 7/ Detached head
+
+#### 7.1/ Deatch the HEAD
+
+When you checkout a specific commit, the _head is detached_ 
+
+The goal is to create a _temporary branch_ to try a new develoment. 
+
+```command
+C:\GIT-1st-example> git log -1
+commit 4ad6782f961b7c048aa31f33d34533df93feccda (HEAD -> master, DEV-01)
+Merge: 36f74a7 6e1e779
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sun Aug 2 22:31:01 2020 +0200
+
+    Merge branch 'master' into DEV-01
+```
+
+Now we detach the HEAD from the master. It will point directly to the commit.
 
 
+```command
+C:\GIT-1st-example> git checkout 4ad6
+```
+
+And the GIT response : 
 
 
+```command
+Note: switching to '4ad6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 4ad6782 Merge branch 'master' into DEV-01
+```
+
+And we prove that the HEAD is detached
+
+```command
+C:\GIT-1st-example> git branch
+* (HEAD detached at 4ad6782)
+  DEV-01
+  master
+```
+
+#### 7.2/ Add a commit
+
+We create a new subdirectory _business_ and a new file named _myapp.py_.  
+
+```command
+C:\GIT-1st-example> mkdir business
+C:\GIT-1st-example> notepad business\myapp.py 
+```command
+
+And the file content is :
+
+```py
+print("My app")
+```
+
+And we commit our work
+
+```command
+C:\GIT-1st-example> git add .
+C:\GIT-1st-example> git status
+HEAD detached at 4ad6782
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   business/myapp.py
+
+C:\GIT-1st-example> git commit -m "Detached HEAD commit - add the file business/myapp.py"
+[detached HEAD a70d15d] Detached HEAD commit - add the file business/myapp.py
+ 1 file changed, 1 insertion(+)
+ create mode 100644 business/myapp.py
+```command
 
 
 
