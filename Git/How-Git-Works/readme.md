@@ -620,6 +620,45 @@ C:\GIT-1st-example> git commit -m "3rd commit : update the readme.md file"
 C:\GIT-1st-example> git log -1
 ```
 
+As we can see, the files containing in the _src_ subtree have not changed, therefore the 3rd commit's object model uses the same reference.
+
+```command
+├───objects
+│   ├───00
+│   │       2573cd5879ba3369abf2f63bfd50e31cd7bb9e  : blob readme.md V2 (the 3rd commit)
+│   │
+│   ├───1f
+│   │       0c4f2bba806387fc7e8c497dcdb5e5f88f2eda  : 3rd commit
+│   │
+│   ├───31
+│   │       89bdb95de4fbb73d8202f9e6d4a72f42550551  : tree / (the 3rd commit)
+│   │
+│   ├───50
+│   │       d6ed774db41e7b84487fbf07b2b6f3ed268ac6  : tree / (1st commit)
+│   │
+│   ├───77
+│   │       3d9db6288817fd69c3b374017b85cd9ef7c1b9  : 1st commit 
+│   │
+│   ├───7f
+│   │       a1839dddcb6166f90d2eb4cb0429cfdef94edc  : 2 nd commit
+│   │
+│   ├───9f
+│   │       0c98d2a3e28f6e982067535699136a573385a9  : helloworld.py (2nd and 3rd commit)
+│   │
+│   ├───bc
+│   │       a043fe83ede3a8d5385e723dccec4b74dd15c6  : tree / (2nd commit)
+│   │
+│   ├───df
+│   │       311d344734adc6e7cbea60c3e31987f855a9fe  : tree /src (shared object : 2nd and 3rd commit)
+│   │
+│   ├───f7
+│   │       19f6ba8069fff67026125d461f28f9424caed7  : blob readme.md V1 (shared object : 1st and 2nd commit)
+│   │
+│   ├───info
+│   └───pack
+```
+
+
 ![GitHub Logo](Img/GIT-03.png)
 
 
