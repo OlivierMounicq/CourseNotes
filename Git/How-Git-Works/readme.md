@@ -1038,6 +1038,56 @@ src
  
 Now we retrieve the commit from _DEV-01_ to _master_ branch :
 
+```command
+C:\GIT-1st-example> git merge DEV-01
+Updating 6e1e779..4ad6782
+Fast-forward
+ core/main.py | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 core/main.py
+```
+
+And the history is :
+
+```command
+C:\GIT-1st-example> git log
+commit 4ad6782f961b7c048aa31f33d34533df93feccda (HEAD -> master, DEV-01)
+Merge: 36f74a7 6e1e779
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sun Aug 2 22:31:01 2020 +0200
+
+    Merge branch 'master' into DEV-01
+
+commit 6e1e779060d8b69f23463a56c2b8a3e90b32deec
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sun Aug 2 21:42:21 2020 +0200
+
+    4th commit : add the project
+
+commit 36f74a7cbad54e1e505d0709f9d0c3e0ac02c1dd
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sun Aug 2 21:24:05 2020 +0200
+
+    DEV-01 - add main.py
+
+commit 1f0c4f2bba806387fc7e8c497dcdb5e5f88f2eda
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 23:42:45 2020 +0200
+
+    3rd commit : update the readme.md file
+
+commit 7fa1839dddcb6166f90d2eb4cb0429cfdef94edc
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 22:36:07 2020 +0200
+
+    2nd commit : add the python file
+
+commit 773d9db6288817fd69c3b374017b85cd9ef7c1b9
+Author: Olivier Mounicq <mounicq@gmail.com>
+Date:   Sat Aug 1 17:23:05 2020 +0200
+
+    1st commit : add the readme.md file
+```
 
  
  
