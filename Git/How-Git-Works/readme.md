@@ -1108,7 +1108,7 @@ And you can notice that this commit has _two parents_ :
 - 36f7 : the commit _DEV-01 - add main.py_
 - 6e1e : the commit _4th commit : add the project_  
 
-
+![GitHub Logo](Img/GIT-04.png)
 
 
  
