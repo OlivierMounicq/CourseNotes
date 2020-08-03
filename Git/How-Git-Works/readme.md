@@ -1305,7 +1305,7 @@ C:\GIT-1st-example> git branch DEV-TMP
 
 And now the commit graph is : 
 
-![GitHub Logo](Img/GIT-06.png)
+![GitHub Logo](Img/GIT-6.png)
 
 
 
