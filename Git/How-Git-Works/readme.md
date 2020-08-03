@@ -1214,7 +1214,7 @@ After the commit:
 ![GitHub Logo](Img/DetachedHead-3.png)
 
 
-#### 7.2/ Back to branch
+#### 7.3/ Back to branch
 
 ```command
 C:\GIT-1st-example> git checkout master
@@ -1244,7 +1244,7 @@ If an object cannot be reachable from the branches or head r tag, GIT will delet
 (notice the GIT message after the git checkout master)  
 
 
-#### 7.3/ Back to last unreachable commit
+#### 7.4/ Back to last unreachable commit
 
 ```command
 C:\GIT-1st-example> git checkout a70d
@@ -1284,5 +1284,11 @@ And the GIT commit graph is :
 
 ![GitHub Logo](Img/DetachedHead-5.png)
 
-#### 7.4/ Create a branch from the commit
+#### 7.5/ Create a branch from the commit
+
+```command
+C:\GIT-1st-example> git branch DEV-TMP
+```
+
+
 
