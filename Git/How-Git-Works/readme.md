@@ -1173,10 +1173,10 @@ C:\GIT-1st-example> git branch
   master
 ```
 
-Before :
+Before :  
 ![GitHub Logo](Img/DetachedHead-01.png)
 
-After : 
+After :  
 ![GitHub Logo](Img/DetachedHead-02.png)
 
 #### 7.2/ Add a commit
@@ -1211,7 +1211,7 @@ C:\GIT-1st-example> git commit -m "Detached HEAD commit - add the file business/
 ```
 
 After the commit:
-After : 
+After :   
 ![GitHub Logo](Img/DetachedHead-03.png)
 
 
