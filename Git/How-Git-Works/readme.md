@@ -1248,7 +1248,7 @@ And now the GIT graph is :
 
 
 What happens ? The commit a70d is not reachable from the _master_ branch.  
-If an object cannot be reachable from the branches or head r tag, GIT will delete it: to avoid this deleting, we have to commit (before the garbage collector runs).  
+If an object cannot be reachable from the branches or head or tag, GIT will delete it: to avoid this deleting, we have to commit (before the garbage collector runs).  
 (notice the GIT message after the git checkout master)  
 
 
@@ -1357,3 +1357,13 @@ $ cat .git/refs/heads/master
 ```
 
 And the commit a70d won't be garbage collected because this commit is reachable from the DEV-TMP branch.
+
+### 8/ The three rules
+
+- The current branch tracks the new commits  
+- When you move to another commit, GIT updates your working directory  
+- Unreachable objects are garbage collected  
+
+### 9/Rebase
+
+
