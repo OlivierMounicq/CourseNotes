@@ -1235,6 +1235,14 @@ to do so with:
 Switched to branch 'master'
 ```
 
+To get HEAD pointer's value (using the GIT bash) : 
+
+``bash
+$ cat .git/HEAD
+ref: refs/heads/master
+```
+
+
 And now the GIT graph is :  
 ![GitHub Logo](Img/DetachedHead-4.png)
 
