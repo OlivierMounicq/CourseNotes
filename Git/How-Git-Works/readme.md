@@ -1272,3 +1272,10 @@ Turn off this advice by setting config variable advice.detachedHead to false
 HEAD is now at a70d15d Detached HEAD commit - add the file business/myapp.py
 ```
 
+```command
+C:\GIT-1st-example> git branch
+* (HEAD detached at a70d15d)
+  DEV-01
+  master
+```
+
