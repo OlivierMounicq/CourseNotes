@@ -1328,6 +1328,32 @@ $ cat .git/refs/heads/master
 ```
 
 
+#### 7.6/ Back to master branch  
 
+```command
+C:\GIT-1st-example> git checkout master
+```
 
+And now the commit graph is : 
 
+![GitHub Logo](Img/DetachedHead-7.png)  
+
+The HEAD pointer:
+```command
+$ cat .git/HEAD
+ref: refs/heads/master
+```
+
+The DEV-TMP branch
+```command
+$ cat .git/refs/heads/DEV-TMP
+a70d15df078261785edc05a3136e5ef3ae9f26a3
+```
+
+The master branch
+```command
+$ cat .git/refs/heads/master
+4ad6782f961b7c048aa31f33d34533df93feccda
+```
+
+And the commit a70d won't be garbage collected because this commit is reachable from the DEV-TMP branch.
