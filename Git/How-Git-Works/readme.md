@@ -1174,10 +1174,10 @@ C:\GIT-1st-example> git branch
 ```
 
 Before :  
-![GitHub Logo](Img/DetachedHead-01.png)
+![GitHub Logo](Img/DetachedHead-1.png)
 
 After :  
-![GitHub Logo](Img/DetachedHead-02.png)
+![GitHub Logo](Img/DetachedHead-2.png)
 
 #### 7.2/ Add a commit
 
@@ -1211,6 +1211,6 @@ C:\GIT-1st-example> git commit -m "Detached HEAD commit - add the file business/
 ```
 
 After the commit:   
-![GitHub Logo](Img/DetachedHead-03.png)
+![GitHub Logo](Img/DetachedHead-3.png)
 
 
