@@ -1214,3 +1214,61 @@ After the commit:
 ![GitHub Logo](Img/DetachedHead-3.png)
 
 
+#### 7.2/ Back to branch
+
+```command
+C:\GIT-1st-example> git checkout master
+```
+And the GIT returns
+
+```command
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  a70d15d Detached HEAD commit - add the file business/myapp.py
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> a70d15d
+
+Switched to branch 'master'
+```
+
+And now the GIT graph is :  
+![GitHub Logo](Img/DetachedHead-4.png)
+
+What happens ? The commit a70d is not reachable from the _master_ branch.  
+If an object cannot be reachable from the branches or head r tag, GIT will delete it: to avoid this deleting, we have to commit (before the garbage collector runs).  
+(notice the GIT message after the git checkout master)  
+
+
+#### 7.2/ Back to last unreachable commit
+
+```command
+C:\GIT-1st-example> git checkout a70d
+```
+
+And the GIT returns
+
+```command
+Note: switching to 'a70d'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at a70d15d Detached HEAD commit - add the file business/myapp.py
+```
+
