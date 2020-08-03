@@ -1237,7 +1237,7 @@ Switched to branch 'master'
 
 To get HEAD pointer's value (using the GIT bash) : 
 
-``bash
+```bash
 $ cat .git/HEAD
 ref: refs/heads/master
 ```
