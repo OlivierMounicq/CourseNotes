@@ -1117,7 +1117,7 @@ And you can notice that this commit has _two parents_ :
 
 ### 7/ Detached head
 
-#### 7.1/ Deatch the HEAD
+#### 7.1/ Detach the HEAD
 
 When you checkout a specific commit, the _head is detached_ 
 
@@ -1173,6 +1173,12 @@ C:\GIT-1st-example> git branch
   master
 ```
 
+Before :
+![GitHub Logo](Img/DetachedHead-01.png)
+
+After : 
+![GitHub Logo](Img/DetachedHead-02.png)
+
 #### 7.2/ Add a commit
 
 We create a new subdirectory _business_ and a new file named _myapp.py_.  
@@ -1204,6 +1210,8 @@ C:\GIT-1st-example> git commit -m "Detached HEAD commit - add the file business/
  create mode 100644 business/myapp.py
 ```
 
-
+After the commit:
+After : 
+![GitHub Logo](Img/DetachedHead-03.png)
 
 
