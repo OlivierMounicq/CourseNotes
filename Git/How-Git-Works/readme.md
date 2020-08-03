@@ -1305,7 +1305,28 @@ C:\GIT-1st-example> git branch DEV-TMP
 
 And now the commit graph is : 
 
-![GitHub Logo](Img/GIT-6.png)
+![GitHub Logo](Img/DetachedHead-6.png)  
+
+And to know which commit is a branch pointing to, you can use this command in the GIT Bash window:
+
+The HEAD pointer:
+```command
+$ cat .git/HEAD
+a70d15df078261785edc05a3136e5ef3ae9f26a3
+```
+
+The DEV-TMP branch
+```command
+$ cat .git/refs/heads/DEV-TMP
+a70d15df078261785edc05a3136e5ef3ae9f26a3
+```
+
+The master branch
+```command
+$ cat .git/refs/heads/master
+4ad6782f961b7c048aa31f33d34533df93feccda
+```
+
 
 
 
