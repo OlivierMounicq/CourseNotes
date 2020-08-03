@@ -1280,5 +1280,9 @@ C:\GIT-1st-example> git branch
   master
 ```
 
+And the GIT commit graph is :  
+
+![GitHub Logo](Img/DetachedHead-5.png)
+
 #### 7.4/ Create a branch from the commit
 
