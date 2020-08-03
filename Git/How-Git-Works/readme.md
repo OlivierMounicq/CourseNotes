@@ -1210,8 +1210,7 @@ C:\GIT-1st-example> git commit -m "Detached HEAD commit - add the file business/
  create mode 100644 business/myapp.py
 ```
 
-After the commit:
-After :   
+After the commit:   
 ![GitHub Logo](Img/DetachedHead-03.png)
 
 
