@@ -1238,13 +1238,13 @@ Switched to branch 'master'
 And now the GIT graph is :  
 ![GitHub Logo](Img/DetachedHead-4.png)
 
-<span style="color:red">
+
 What happens ? The commit a70d is not reachable from the _master_ branch.  
 If an object cannot be reachable from the branches or head r tag, GIT will delete it: to avoid this deleting, we have to commit (before the garbage collector runs).  
 (notice the GIT message after the git checkout master)  
-</span>
 
-#### 7.2/ Back to last unreachable commit
+
+#### 7.3/ Back to last unreachable commit
 
 ```command
 C:\GIT-1st-example> git checkout a70d
@@ -1279,4 +1279,6 @@ C:\GIT-1st-example> git branch
   DEV-01
   master
 ```
+
+#### 7.4/ Create a branch from the commit
 
