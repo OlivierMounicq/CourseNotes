@@ -1280,6 +1280,11 @@ C:\GIT-1st-example> git branch
   master
 ```
 
+```bash
+$cat .git/HEAD
+a70d15df078261785edc05a3136e5ef3ae9f26a3
+```
+
 And the GIT commit graph is :  
 
 ![GitHub Logo](Img/DetachedHead-5.png)
