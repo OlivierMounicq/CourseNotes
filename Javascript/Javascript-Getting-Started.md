@@ -23,7 +23,7 @@ let total = 149.99;
 const pi = 3.1426
 ```
 
-#### 1.2/ Former method to declre a variable
+#### 1.2/ Former method to declare a variable
 
 The former way to declare a variable is to use __var__. This is deprecated.  
 The main difference between __var__ and __let__ is the error management:
