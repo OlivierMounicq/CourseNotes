@@ -48,5 +48,14 @@ If you open the Chrome console, an error appears:
 Uncaught ReferenceError : cannot access 'price' before initialization
 ```
 
+And if execute this code, the console returns:
+```js
+showMessage(price);
+console.log(price);
+
+//Console message:
+//undefined
+```
+
 
 
