@@ -41,7 +41,7 @@ __6/__ Clone the svn repo by using the GIT command git svn clone :
 PS E:\Retro-OUT-For-Git> git svn clone https://srv-www-04.finaveo.local:8443/svn/upsideo/retro --prefix=svn/ --no-metadata --authors-file "dev-list.txt" --stdlayout E:\Retro-OUT-For-Git-WorkingDir  
 ```
 
-_Remark:_ : maybe you want to export to GIT a specific branch, so in this case, you must add the option -T branches/_&lt;myBranch&gt;_
+_Remark:_ maybe you want to export to GIT a specific branch, so in this case, you must add the option -T branches/_&lt;myBranch&gt;_
 ```bat
 PS E:\Retro-OUT-For-Git>  git svn clone -T branches/UpsideoRetro  https://srv-www-04.finaveo.local:8443/svn/upsideo/retro --prefix=svn/ --no-metadata --authors-file "dev-list.txt" --stdlayout E:\Retro-IN-For-Git-WorkingDir
 ```
