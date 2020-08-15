@@ -50,6 +50,11 @@
   * 2008 : Onion architecture  
   * 2009 : Microservices  
   
+* 2010s
+  * 2010 : Data Context Interaction Architecture  
+  * 2012 : Clean architecture  
+  * 2014 : [C4 model](https://www.infoq.com/articles/C4-architecture-model/) by Simon Brown
+  
  
   
  
