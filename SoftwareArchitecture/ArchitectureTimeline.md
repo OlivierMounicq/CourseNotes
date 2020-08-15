@@ -23,6 +23,19 @@
   * 1986 : Erlang  
   * 1987 : Perl  
   * 1987 – [PAC aka Hierarchical Model-View-Controller](https://www.lri.fr/~mbl/ENS/FONDIHM/2013/papers/Coutaz-Interact87.pdf)  
-  * 1988 :  [Liskov Substitution Principle (LSP)](https://en.wikipedia.org/wiki/Liskov_substitution_principle)
+  * 1988 :  [Liskov Substitution Principle (LSP)](https://en.wikipedia.org/wiki/Liskov_substitution_principle)  
+
+* 1990s
+  * Layering: 3 tier, the 1st tier with the UI, the 2nd tier Business Logic (and the UI presentation logic in case of a browser as client), the 3rd tier with the Data Storage  
+  * 1991 : Message bus  
+  * 1991 : Python  
+  * 1992 :  Entity-Boundary-Interactor Architecture aka EBC aka EIC  
+  * 1993 : Ruby  
+  * 1995 : Delphi, Java, Javascript, PHP  
+  * 1996 : Model View Persenter (MVP)  
+  * 1997 : 
+    - Open-Closed Principle (OCP), Interface Separation Principle (ISP), Dependency Injection Principle (DIP) : S__O__L__ID__  
+    - [Package Princicple](https://en.wikipedia.org/wiki/Package_principles)
+  
   
  
