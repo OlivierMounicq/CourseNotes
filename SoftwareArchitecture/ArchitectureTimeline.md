@@ -10,8 +10,8 @@
    * 1958 : Algol  
    
 * 1970s
- * Procedural / Functional Programming  
- * 1970 : Pascal  
- * 1972 : C  
- * 1979 : Model View Controler model
+  * Procedural / Functional Programming  
+  * 1970 : Pascal  
+  * 1972 : C  
+  * 1979 : Model View Controler model
  
