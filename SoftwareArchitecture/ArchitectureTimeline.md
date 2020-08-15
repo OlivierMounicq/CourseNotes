@@ -22,6 +22,7 @@
   * CORBA – Common Object Request Broker Architecture (though the first stable version was only out in 1991, the first usages were during the 1980s)  
   * 1986 : Erlang  
   * 1987 : Perl  
-  * 1987 – [PAC aka Hierarchical Model-View-Controller](https://www.lri.fr/~mbl/ENS/FONDIHM/2013/papers/Coutaz-Interact87.pdf)
+  * 1987 – [PAC aka Hierarchical Model-View-Controller](https://www.lri.fr/~mbl/ENS/FONDIHM/2013/papers/Coutaz-Interact87.pdf)  
+  * 1988 :  [Liskov Substitution Principle (LSP)](https://en.wikipedia.org/wiki/Liskov_substitution_principle)
   
  
