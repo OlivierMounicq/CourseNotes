@@ -55,6 +55,8 @@
   * 2012 : Clean architecture  
   * 2014 : [C4 model](https://www.infoq.com/articles/C4-architecture-model/) by Simon Brown
   
+  
+[Source](https://edwardthienhoang.wordpress.com/2018/01/15/software-architecture-timeline/)  
  
   
  
