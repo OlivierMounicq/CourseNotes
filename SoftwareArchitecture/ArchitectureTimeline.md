@@ -35,7 +35,21 @@
   * 1996 : Model View Persenter (MVP)  
   * 1996 : 
     - Open-Closed Principle (OCP), Interface Separation Principle (ISP), Dependency Injection Principle (DIP) : SOLID  
-    - [Package Princicple](https://en.wikipedia.org/wiki/Package_principles) : Reuse-release Equivalence Principle (REP) / Common-Reuse Principle (CRP) / Common-Closure Principle (CCP) / Acyclic Dependencies Principle (ADP)
+    - [Package Princicple](https://en.wikipedia.org/wiki/Package_principles) : Reuse-release Equivalence Principle (REP) / Common-Reuse Principle (CRP) / Common-Closure Principle (CCP) / Acyclic Dependencies Principle (ADP)  
+  * 1997 : Package Principle : Stable-Dependencies Principle (SDP) / Stable-Abstractions Principle (SAP)  
+  * 1997 : [Aspect Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming)  
+  * 1997 : Web Service  
+  * 1997 : ESB – Enterprise Service Bus (although the book that coined the term was published in 2004, the concept was already used before)  
   
+* 2000s
+  * 2002  : Single Reponsibility Prnciple (SRP / SOLID)  
+  * 2003 : Domain-Driven Design  
+  * 2005 : [Model-View-Viewmodel (MVVM)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)  
+  * 2005 : Ports & Adapters Architecture aka Hexagonal Architecture  
+  * 2006 : CQRS & ES (Command Query Responsibility Segregation & Event Sourcing)  
+  * 2008 : Onion architecture  
+  * 2009 : Microservices  
+  
+ 
   
  
