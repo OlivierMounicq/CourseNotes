@@ -35,6 +35,42 @@ Tous les ordinateurs sont concçus sur le même modèle : le modèle universel d
 
 L'algorithmique répartie contient en plus des instructions de l'algorithmique classique (addtion, soustraction, embranchement...) des instructions pour envoyer des messages afin de synchroniser les machines.
 
+#### 4.2/ Algorithmique répartie et complexité  
+
+##### 4.2.1 Complexité d'un algorithme classique
+
+La complexité mesure l'évolution du nombre d'instructions d'un algorithme par rapport à la taille des données fournies en entrée.
+
+##### 4.2.2 Complexité d'un algorithme réparti
+
+La complexité d'un algorithme réparti mesure le nombre de message envoyé par rapport à la taille du réseau.  
+On considère que le cout d'une instruction locale est négligeable. Ce qui est considéré comme couteaux : l'envoi de message.  
+
+#### 4.3 Atomicité
+
+L'atomicité est l'illusion d'avoir une machine universelle unique à la place d'un réseau de machine universelle.  
+
+#### 4.4 Atomicité et robustesse : l'universalité perdue  
+
+Lorsque l'armée américaine a commencé à dupliquer les informations au sein de son réseau d'ordinateurs, les concepteurs devaient assurer deux caractéristiques :  
+- Atomicité :garder l'illusion de se connecter à une seule machine
+- Robustesse : tolérance aux défaillances 
+
+=> Il est impossible d'assurer ces deux caractéristiques en même temps.  (cf Hagit Attiya, Amotz Bar-Noy et Danny Dolev)
+
+Le problème qui consiste donc à concevoir un algorithme qui va mettre d'accord un ensemble de machines est impossible à résoudre !
+
+On a N serveurs et au minimum un peut tomber en panne  
+=> dans ce cas, il est impossible de garantir l'unicité de la réponse envoyée par le réseau à un ensemble de client : l'atomicité est violer.
+
+
+
+__Pas de consensus => pas d'atomicité => pas d'universalité__ 
+
+
+
+
+
 
 
 
