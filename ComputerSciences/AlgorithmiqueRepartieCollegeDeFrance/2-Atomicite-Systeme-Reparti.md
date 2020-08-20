@@ -88,5 +88,41 @@ On passe de manière incrémentale d'une variable booléenne SRSW de comportemen
 #### 5.1/ 1ere étape : passer d'un registre binaire SRSW _sûr_ vers un registre binaire _sûr_ MRSW.  
 
 On veut qu'une multitude de lecteur puisse accéder à cette variable.  
+=> Pour cela, on va utiliser autant de registre de base que de processus voulant lire la variable: on a créer un tableau de N registre de base. Chaque processus _lecteur_ aura un registre de base qui lui sera asigné (Reg[i])
 
+```py
+
+Read()
+  return (Reg[i].read())
+  
+Write(v)
+  for j = 1 to N
+    Reg[j].write(v)
+```
+
+_Remarque \#_ : cette transformation permettant de passer d'une variable booléenne _sûre_ SRSW à une variable booléeene _sûre_ MRSW fonctionne aussi pour des registres comportant une multitude de valeurs et des registres de type régulier. 
+
+_Remarque \#2_ : Cependant cette transformation ne fonctionne pas pour les regisres de type atomique. En effet:
+
+
+
+#### 5.2/ 2ème étape : passer d'un registre booléen _sû_ MRSW vers un registre booléen MRSW _régulier_ 
+
+Un registre _régulier_ permet de certifier que la valeur retournée est soit une valeur en cours d'écriture ou que la valeur a été déjà écrite par le passé. 
+
+=> On utilise un seul registre _sûr_ MRSW et 
+
+```py
+Read()
+  return (Reg.red())
+
+Write(v)
+  if old != v then
+    Reg.write(v)
+    old = v
+```
+
+
+Il y a 2 cas:
+- soit 
 
