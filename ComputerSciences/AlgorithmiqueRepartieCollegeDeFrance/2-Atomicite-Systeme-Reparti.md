@@ -21,7 +21,9 @@ Pour simplifier, nous supposons que regsitres ne sont que des entiers et la vale
 ### 2/ Dimensions d'un registre
 
 Il y a 3 dimensions : 
-  - Dimension 1 : la valeuur du registre  
+  - Dimension 1 : la valeuur du registre et la signification de la valeur stockée  
+    - booléen si la valeur stockée dans le registre est 1 ou 0  
+    - des entiers si on peut enregistrer n'importe quelle valeur dans le registre
   - Dimension 2 : 
     - SRSW : Single Reader, single writer  
     - MRSW : Multiple Reader, Single Writer  
