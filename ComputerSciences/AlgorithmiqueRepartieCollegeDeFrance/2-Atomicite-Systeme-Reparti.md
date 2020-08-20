@@ -68,7 +68,25 @@ Wait-free : ici, un CPU prêt à lire ou à écrire dans le registre ne doit pas
 Le code d'un algorithme sera exécuté par N processeur mais on montre le fonctionnement de l'algorithme sur un seul processeur.
 
 - Le processus executant le code est p<sub>i</sub>  
-- Le système comporte N processus  
+- Le système comporte N processus   
+- Les processus se connaissent tous entre eux  
+- Les opérations sur les registre de plus haut niveau commencent par des majuscules : _Read()_ et _Write()_  
+- Les opérations sur les registres de base (booléen/SRSW/sûr) commencent par des minuscules : _read()_ et _write()_  
+- On omet l'instruction _return(OK)_ à la fin des implémentations des opérations d'écriture _Write_  
+- Les écritures sont censé de retourner OK et les lectures une valeur
 
 Nous distinguerons les regstres de base et haut niveau.  
+
+L'exercice devient plus compliqué lorsque:
+- le nombre de processus évolue de manière dynamique  
+- lorsque les processus ne se connaissent pas tous
+
+### 5/ D'une variable booléenne _sûr_ SRSW vers une variable multi-valeur atomique MRMW
+
+On passe de manière incrémentale d'une variable booléenne SRSW de comportement _sûr_ vers une variable multi valeur atomique MRMW.
+
+#### 5.1/ 1ere étape : passer d'un registre binaire SRSW _sûr_ vers un registre binaire _sûr_ MRSW.  
+
+On veut qu'une multitude de lecteur puisse accéder à cette variable.  
+
 
