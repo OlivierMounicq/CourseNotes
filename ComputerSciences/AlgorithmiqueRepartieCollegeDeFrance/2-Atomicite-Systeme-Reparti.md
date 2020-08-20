@@ -61,3 +61,14 @@ Après deux décennies de travaux en algorithmique répartie, on a atteint le r�
 __Theroeme__ Un registre atomique acceptant une multitude de valeurs et pouvant être accédé en lecture et écriture par pluieurs CPU peut être implémenté par des registres binaire (booléen), lu par un seul lecteur et écrit que par un seul écrivain et avec un comportement _sur_.  
 (A multivalued MRMW atomic _<b>register</b>_ can be wait-free implemented with binary SRSW safe register.)  
 
+Wait-free : ici, un CPU prêt à lire ou à écrire dans le registre ne doit pas être obligé d'attendre d'autres processeurs. Cette notion couvre la notion de _robustesse_ dans le sens que si un processeur ne fonctionne plus, il ne bloque pas les autres processeurs.  
+
+### 4/ Conventions
+
+Le code d'un algorithme sera exécuté par N processeur mais on montre le fonctionnement de l'algorithme sur un seul processeur.
+
+- Le processus executant le code est p<sub>i</sub>  
+- Le système comporte N processus  
+
+Nous distinguerons les regstres de base et haut niveau.  
+
