@@ -12,7 +12,18 @@ read()
   return(x)
   
 write(v)
-  x -< v;
+  x <- v;
   return(OK);
 ```
 
+Pour simplifier, nous supposons que regsitres ne sont que des entiers et la valeur par défaut de ces registre est zéro.
+
+### 2/ Dimensions d'un registre
+
+Il y a 3 dimensions : 
+  - Dimension 1 : la valeuur du registre  
+  - Dimension 2 : 
+    - SRSW : Single Reader, single writer  
+    - MRSW : Multiple Reader, Single Writer  
+    - MRMV : Multiple Reader, Multiple Writer  
+   
