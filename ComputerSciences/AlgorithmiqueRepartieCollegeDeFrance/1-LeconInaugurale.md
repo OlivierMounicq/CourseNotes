@@ -88,6 +88,44 @@ Ce théorème est une généralisation/une extension de la preuve de Lynch:
 - Loui & Abu-Amara : partage de mémoire  
 
 
+### 5/ Universalité et Consensus  
+
+Donc nous savons que pas de consensus donc pas d'universalité.  
+Mais la quête d'universalité part aussi du consensus. _Le consensus est une condition nécessaire à l'universalité._  
+=> La résolution du consensus est une condition suffisante à l'universalité. (Bien que nous avons démontré qu'il est impossible de résoudre le problème de consensus).  
+
+#### 5.1/ Théorème proposé par Leslie Lamport en 1978 et démontré par Schneider en 91  
+__Toute solution de consensus permet de construire une machine répartie universelle__  
+
+Donc si on résoud le problème du consensus alors on pourra créer une machine universelle répartie. (Mais on a démontré l'impossibilité de tendre vers un consensus !).  
+
+#### 5.2/ Théorèmes et conditions rendant impossible  
+
+_Dans un réseau (1) asynchrone avec (2) envoi de message ou (2) partage de mémoire, le (3) consensus est impossible._  
+
+__(1) Asynchronisme__ : aucune hypothèse sur le temps de communication (le message met un certain temps à arriver mais on ne sait pas déterminer le seuil à partir duquel l'absence de réception de message permet de dire que l'émetteur est tombé en panne)  
+=> Si on a une borne supérieure pour le temps de communication, la résolution du consensus est simple. Le fait d'avoir une borne supérieure est une hypothèse forte par définition. De plus, si la borne est trop élevé, la réactivité pour déterminer une panne sera moins bonne.  
+
+Le travail des chercheurs : trouver une hypothèse plus faible sur le temps et qui permet de résoudre le consensus.  
+
+_hypothèse faible_ : il existe une borne (on ne connait pas cette borne et on ne sait pas quand elle sera vérifiée)  
+
+#### 5.3/ Consensus indulgent
+
+__Consensus indulgent : ces algorithmes doivent pardonner le erreurs__  
+=> Exemple : Algorithme Paxos de Lamport.  
+
+#### 5.4/ Compare and swap (CAS)
+
+Impossibilité du consensus en mémoire partagée repose sur le fait que les actions de lecture et d'écriture sont des actions séparées. Si on les regroupe et on ajoute une opération de test en une seule opération hardware, on obtient CAS (Compare And Swap). =>   
+
+
+#### 5.5/ Restreindre le consensus  
+
+Une piste aussi est de vouloir de restreindre le consensus : au lieu de vouloir d'atteindre le consensus pour les N machines du réseau, on veut résoudre le consensus pour k  machines (avec k < N).
+
+
+=> Algorithme répartie & tolérance aux défaillances byzantines.
 
 
 
