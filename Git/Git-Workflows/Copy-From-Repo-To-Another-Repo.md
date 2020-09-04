@@ -12,6 +12,11 @@ PS C:\Temp\GitRepo1> git pull origin2 master --allow-unrelated-histories
 PS C:\Temp\GitRepo1> git push origin2 master
 ```
 
+### The GIT Bash Editor window
+
+- to write a comment : press __i__ and type the message  
+- to exit : type ESC key + __:x!__ + __Enter__
+
 
 
 
