@@ -1,1 +1,2 @@
-## Algorithmique réaprtie
+## Algorithmique répartie
+
